@@ -1,0 +1,52 @@
+//Ejercicio 8
+//LEER UN CARACTER
+//Ederson Gualoto, Darwin Tapia, Alex chuquimarca
+//19/11/2025
+#include <stdio.h>
+
+int main() {
+    char c;
+
+    printf("Ingrese un caracter: ");
+    scanf("%c", &c);
+
+    switch(c) {
+
+        // Vocal mayuscula
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+            printf("Es una VOCAL MAYUSCULA.\n");
+            break;
+
+        //Vocal Minuscula
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+
+            printf("Es una VOCAL MINUSCULA.\n");
+            break;
+
+        default:
+
+            //Variable numerica
+            if (c >= '0' && c <= '9') {
+
+                printf("Es un NUMERO.\n");
+            }
+            //Letras consonante
+            else if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) {
+                printf("Es una CONSONANTE.\n");
+            }
+            //Cualquier otro carácter que no esteen el rango
+            else {
+                printf("No es una letra ni un numero.\n");
+            }
+    }
+
+    return 0;
+}
